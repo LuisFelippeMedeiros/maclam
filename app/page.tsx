@@ -2,7 +2,7 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Sobre from "./components/Sobre/Sobre";
 import Empreendimentos from "./components/Empreendimentos/Empreendimentos"; // Importe o novo componente
-import Contato from "./components/Contato/Contato";
+// import Contato from "./components/Contato/Contato";
 import Footer from "./components/Footer/Footer";
 
 // Dados do Moema Trade Center
@@ -75,7 +75,7 @@ export default function Home() {
         />
       </section>
 
-      <Contato />
+      {/* <Contato /> */}
       <Footer />
     </main>
   );
