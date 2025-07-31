@@ -1,0 +1,105 @@
+.container {
+  display: flex;
+  gap: 3rem;
+  padding: 6rem 4rem;
+  background-color: var(--cor-fundo);
+}
+
+/* Classe para inverter a ordem das colunas */
+.container.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Coluna da Esquerda (Texto) */
+.textWrapper {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.preTitle {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cor-secundaria);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: var(--cor-primaria);
+}
+
+.description p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--cor-texto);
+  margin-bottom: 1rem;
+}
+
+.negocioImobiliario {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ddd;
+}
+
+.negocioImobiliario span {
+  display: block;
+  font-weight: bold;
+  color: var(--cor-primaria);
+  margin-bottom: 0.5rem;
+}
+
+/* Coluna da Direita (Galeria) */
+.galleryWrapper {
+  flex: 1 1 60%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 150px); /* Altura de base para as linhas */
+  gap: 1rem;
+}
+
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Faz a primeira imagem ocupar mais espaço para dinamismo */
+.imageContainer:nth-child(1) {
+  grid-column: 1 / 3; /* Ocupa 2 colunas */
+  grid-row: 1 / 3; /* Ocupa 2 linhas */
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.imageContainer:hover .image {
+  transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .container,
+  .container.reverse {
+    flex-direction: column;
+    padding: 4rem 2rem;
+  }
+
+  .galleryWrapper {
+    /* Em telas menores, as imagens podem ter uma altura fixa */
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}

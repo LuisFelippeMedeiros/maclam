@@ -1,0 +1,75 @@
+.sobreContainer {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  background-color: var(--cor-branco);
+  padding: 6rem 4rem;
+  overflow: hidden; /* Garante que o recorte não cause scroll horizontal */
+}
+
+.imageWrapper {
+  flex: 1 1 45%; /* A imagem ocupa 45% do espaço */
+  min-width: 300px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px; /* Bordas levemente arredondadas */
+
+  /* A MÁGICA ACONTECE AQUI: O RECORTE */
+  /* Cria um polígono com um corte diagonal na direita */
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.textWrapper {
+  flex: 1 1 55%; /* O texto ocupa 55% do espaço */
+}
+
+.preTitle {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cor-secundaria);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: var(--cor-primaria);
+}
+
+.paragraphs p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--cor-texto);
+  margin-bottom: 1rem;
+}
+
+.paragraphs p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsividade para tablets e celulares */
+@media (max-width: 900px) {
+  .sobreContainer {
+    flex-direction: column; /* Empilha a imagem sobre o texto */
+    padding: 4rem 2rem;
+    gap: 2.5rem;
+  }
+
+  .image {
+    /* Em telas menores, podemos simplificar ou remover o recorte */
+    clip-path: none;
+    max-height: 400px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}

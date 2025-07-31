@@ -1,95 +1,82 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
+import Sobre from "./components/Sobre/Sobre";
+import Empreendimentos from "./components/Empreendimentos/Empreendimentos"; // Importe o novo componente
+import Contato from "./components/Contato/Contato";
+import Footer from "./components/Footer/Footer";
+
+// Dados do Moema Trade Center
+const moemaInfo = {
+  preTitle: "MOEMA COMFORT HOTEL & TRADE CENTER",
+  title: "O Primeiro empreendimento mixed da região",
+  description: [
+    "Escritórios e hotelaria no mesmo empreendimento.",
+    "Implantação e fachada que ressaltam esta integração e a pluralidade de atividades.",
+    "Próximo ao Parque Ibirapuera e ao Aeroporto de Congonhas.",
+    "No Moema Comfort Hotel & Trade Center, o Grupo Maclam participou do Negócio Imobiliário que deu origem ao empreendimento.",
+  ],
+  images: [
+    "/moema/01.jpg",
+    "/moema/02.jpg",
+    "/moema/03.jpg",
+    "/moema/04.jpg",
+    "/moema/05.jpg",
+  ],
+  showMaclamLogo: true,
+};
+
+// Dados (placeholder) para o Maclam Office para demonstrar a reutilização
+const maclamOfficeInfo = {
+  preTitle: "MACLAM OFFICE",
+  title: "Modernidade e sofisticação para o seu negócio",
+  description: [
+    "Localizado no coração financeiro da cidade, o Maclam Office oferece uma infraestrutura de ponta.",
+    "Com salas comerciais de alto padrão e design inovador, é o ambiente perfeito para empresas que buscam crescimento e visibilidade.",
+  ],
+  images: [
+    "/office/01.jpg", // Lembre-se de criar essa pasta e imagens
+    "/office/02.jpg",
+    "/office/03.jpg",
+  ],
+  showMaclamLogo: false, // Neste, não mostramos o logo
+};
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main>
+      <Header />
+      <section id="inicio">
+        <Hero />
+      </section>
+      <section id="sobre">
+        <Sobre />
+      </section>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      {/* Seção Maclam Office (layout normal) */}
+      <section id="maclam-office">
+        <Empreendimentos
+          preTitle={maclamOfficeInfo.preTitle}
+          title={maclamOfficeInfo.title}
+          description={maclamOfficeInfo.description}
+          images={maclamOfficeInfo.images}
+          showMaclamLogo={maclamOfficeInfo.showMaclamLogo}
+        />
+      </section>
+
+      {/* Seção Moema Trade Center (com layout reverso) */}
+      <section id="moema-trade-center">
+        <Empreendimentos
+          preTitle={moemaInfo.preTitle}
+          title={moemaInfo.title}
+          description={moemaInfo.description}
+          images={moemaInfo.images}
+          showMaclamLogo={moemaInfo.showMaclamLogo}
+          reverseLayout={true} // Invertendo o layout para variar
+        />
+      </section>
+
+      <Contato />
+      <Footer />
+    </main>
   );
 }
