@@ -46,7 +46,7 @@ const Header = () => {
         <Link href="#moema-trade-center" onClick={closeMenu}>
           Moema Trade Center
         </Link>
-        <Link href="#maclam-office" onClick={closeMenu}>
+        <Link href="#sobre" onClick={closeMenu}>
           Maclam Office
         </Link>
         {/* Este link de contato abre o WhatsApp em uma nova aba */}
