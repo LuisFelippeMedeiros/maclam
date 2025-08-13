@@ -2,7 +2,7 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Sobre from "./components/Sobre/Sobre";
 import Empreendimentos from "./components/Empreendimentos/Empreendimentos";
-// import Contato from "./components/Contato/Contato";
+import Contato from "./components/Contato/Contato";
 import Footer from "./components/Footer/Footer";
 import Gallery from "./components/Gallery/Gallery";
 
@@ -70,7 +70,7 @@ export default function Home() {
         <Gallery />
       </section>
 
-      {/* <Contato /> */}
+      <Contato />
       <Footer />
     </main>
   );
