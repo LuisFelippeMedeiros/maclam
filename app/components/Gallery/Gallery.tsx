@@ -38,7 +38,9 @@ const Gallery = () => {
 
   return (
     <div className={styles.galleryContainer}>
-      <h2 className={styles.galleryTitle}>Galeria de Imagens</h2>
+      <h2 className={styles.galleryTitle}>
+        Conheça os detalhes do nosso empreedimento
+      </h2>
       <div className={styles.carousel}>
         <div
           className={styles.carouselInner}

@@ -4,20 +4,19 @@ import Sobre from "./components/Sobre/Sobre";
 import Empreendimentos from "./components/Empreendimentos/Empreendimentos";
 // import Contato from "./components/Contato/Contato";
 import Footer from "./components/Footer/Footer";
-import Gallery from "./components/Gallery/Gallery"; // 1. Import da Galeria
+import Gallery from "./components/Gallery/Gallery";
 
 // ==================================================================
-//  DADOS DO MOEMA TRADE CENTER ATUALIZADOS AQUI
+//  DADOS DO MOEMA TRADE CENTER
 // ==================================================================
 const moemaInfo = {
-  preTitle: "MOEMA TRADE CENTER",
-  title: "Um ativo estratégico para quem valoriza presença e performance.",
+  preTitle: "",
+  title: "MOEMA TRADE CENTER",
   description: [
     "O Moema Trade Center é um edifício corporativo de alto padrão, estrategicamente localizado na Av. Ibirapuera, 2144 – em Moema, uma das regiões mais valorizadas e conectadas de São Paulo.",
     "Defronte à estação Moema do metrô — é só atravessar a rua. Além disso, o empreendimento está próximo ao Shopping Ibirapuera, Parque Ibirapuera, Aeroporto de Congonhas e a poucos minutos da Av. Faria Lima, garantindo mobilidade total para empresas que valorizam presença e agilidade.",
     "As lajes têm quase 280 m², divididas em dois escritórios independentes - ~140 m² - que podem ser facilmente unificados, oferecendo flexibilidade para negócios de diferentes portes. São dois elevadores sociais, cinco vagas de garagem por conjunto, estacionamento para visitantes, ar-condicionado central com controle individual e sala de reunião compartilhada.",
     "O Moema Trade Center entrega mobilidade, conveniência e imagem corporativa.",
-    "Mais que uma sede. Um ativo estratégico para quem valoriza presença e performance.",
   ],
   images: [
     "/moema/01.jpg",
@@ -26,7 +25,8 @@ const moemaInfo = {
     "/moema/04.jpg",
     "/moema/05.jpg",
   ],
-  showMaclamLogo: true,
+  // A linha abaixo foi alterada de 'true' para 'false' para remover a seção
+  showMaclamLogo: false,
 };
 
 // Dados (placeholder) para o Maclam Office para demonstrar a reutilização
@@ -49,18 +49,8 @@ export default function Home() {
         <Hero />
       </section>
 
-      {/* Seção Maclam Office (layout normal) */}
-      {/* <section id="maclam-office">
-        <Empreendimentos
-          preTitle={maclamOfficeInfo.preTitle}
-          title={maclamOfficeInfo.title}
-          description={maclamOfficeInfo.description}
-          images={maclamOfficeInfo.images}
-          showMaclamLogo={maclamOfficeInfo.showMaclamLogo}
-        />
-      </section> */}
+      {/* <section id="maclam-office"> ... </section> */}
 
-      {/* Seção Moema Trade Center (com layout reverso e copy atualizada) */}
       <section id="moema-trade-center">
         <Empreendimentos
           preTitle={moemaInfo.preTitle}
@@ -76,7 +66,6 @@ export default function Home() {
         <Sobre />
       </section>
 
-      {/* 2. Seção da Galeria adicionada aqui */}
       <section id="galeria">
         <Gallery />
       </section>

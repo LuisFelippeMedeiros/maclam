@@ -4,7 +4,7 @@ import styles from "./Sobre.module.css";
 const Sobre = () => {
   return (
     <div className={styles.sobreContainer}>
-      {/* Coluna da Imagem (caminho da imagem atualizado) */}
+      {/* Coluna da Imagem */}
       <div className={styles.imageWrapper}>
         <Image
           src="/maclam-office/maclam-office.jpg"
@@ -15,12 +15,10 @@ const Sobre = () => {
         />
       </div>
 
-      {/* Coluna do Texto (textos atualizados) */}
+      {/* Coluna do Texto com a hierarquia de títulos ajustada */}
       <div className={styles.textWrapper}>
-        <span className={styles.preTitle}>SOBRE A MACLAM OFFICE</span>
-        <h2 className={styles.title}>
-          Referência em edifícios corporativos inteligentes
-        </h2>
+        {/* O antigo pré-título agora é o título principal. Removemos o span. */}
+        <h2 className={styles.title}>SOBRE A MACLAM OFFICE</h2>
         <div className={styles.paragraphs}>
           <p>
             Há mais de 40 anos, a Maclam Office vem consolidando sua trajetória
