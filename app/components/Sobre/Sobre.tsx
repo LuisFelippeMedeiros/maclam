@@ -4,45 +4,42 @@ import styles from "./Sobre.module.css";
 const Sobre = () => {
   return (
     <div className={styles.sobreContainer}>
-      {/* Coluna da Imagem */}
+      {/* Coluna da Imagem (caminho da imagem atualizado) */}
       <div className={styles.imageWrapper}>
         <Image
-          // SUBSTITUA PELA SUA IMAGEM QUANDO TIVER
-          src="/Sobre.jpg" // Coloque uma imagem sua em /public com este nome
-          alt="Detalhe arquitetônico de um prédio moderno"
+          src="/maclam-office/maclam-office.jpg"
+          alt="Edifício corporativo moderno da Maclam Office"
           width={600}
           height={750}
           className={styles.image}
         />
       </div>
 
-      {/* Coluna do Texto */}
+      {/* Coluna do Texto (textos atualizados) */}
       <div className={styles.textWrapper}>
-        <span className={styles.preTitle}>GRUPO MACLAM</span>
+        <span className={styles.preTitle}>SOBRE A MACLAM OFFICE</span>
         <h2 className={styles.title}>
-          Criamos designs de qualidade e ideias inovadoras
+          Referência em edifícios corporativos inteligentes
         </h2>
         <div className={styles.paragraphs}>
           <p>
-            Empresa especializada na realização de empreendimentos imobiliários
-            originais em sua arquitetura, design e funcionalidade, sempre
-            localizados em bairros que também tem algo de especial.
+            Há mais de 40 anos, a Maclam Office vem consolidando sua trajetória
+            como referência no desenvolvimento de edifícios corporativos
+            inteligentes em São Paulo. Com forte atuação no mercado imobiliário
+            comercial, a empresa se destaca pela entrega de empreendimentos que
+            aliam localização estratégica, infraestrutura de alto padrão e
+            grande potencial de valorização.
           </p>
           <p>
-            Seus produtos se destacam no contexto urbano, representando
-            excelentes opções de investimento e moradia.
+            Nosso propósito é criar espaços que impulsionam negócios, oferecendo
+            soluções modernas, funcionais e adaptadas às novas formas de
+            trabalhar.
           </p>
           <p>
-            Funcionalidade e beleza sem exageros. Design contemporâneo. Linhas
-            diferentes que instigam o olhar. Simplicidade que ousa. Que se
-            destaca no caótico, no repetitivo. Que tem e confere identidade.
-          </p>
-          <p>Mais que roupagem ou verniz. Jeito de ser, existir e fazer.</p>
-          <p>
-            Em 2015, o Grupo Maclam realizou aquisição da Construtora [+]Casa
-            para reforçar e aprofundar os valores de concepções arquitetônicas
-            singulares e ousadas, reforçando seu espírito inquieto perante à
-            realidade do contexto urbano paulistano.
+            Ao longo de mais de quatro décadas, reunimos credibilidade,
+            experiência e uma visão de futuro que nos permite acompanhar as
+            transformações do mercado e oferecer produtos que fazem sentido hoje
+            — e continuarão fazendo no amanhã.
           </p>
         </div>
       </div>

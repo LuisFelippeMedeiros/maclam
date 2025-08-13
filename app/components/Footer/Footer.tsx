@@ -24,13 +24,13 @@ const Footer = () => {
             urbano.
           </p>
           <div className={styles.socials}>
+            {/* Link do Instagram ATUALIZADO */}
             <a
-              href="#"
+              href="https://www.instagram.com/maclamoffice?igsh=MWkycGl5Njh6c2JlbQ%3D%3D&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
             >
-              {/* Ícone SVG do Instagram */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -47,34 +47,14 @@ const Footer = () => {
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
               </svg>
             </a>
+            {/* Link do Facebook REMOVIDO */}
+            {/* Link do LinkedIn ATUALIZADO */}
             <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-            >
-              {/* Ícone SVG do Facebook */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-              </svg>
-            </a>
-            <a
-              href="#"
+              href="https://www.linkedin.com/company/maclam-office"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
             >
-              {/* Ícone SVG do LinkedIn */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -120,9 +100,8 @@ const Footer = () => {
         <div className={styles.mapColumn}>
           <h3 className={styles.footerTitle}>Nossa Localização</h3>
           <div className={styles.mapWrapper}>
-            {/* INSTRUÇÃO PARA O CLIENTE: Substituir este iframe pelo do Google Maps */}
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.175941935826!2d-46.65651718440683!3d-23.56221196749219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0x206c48064161863d!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1678886578796!5m2!1spt-BR!2sbr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.326229558981!2d-46.67122842379303!3d-23.59155916249483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a1d5362973b%3A0x6b095e9f4568e6de!2sAv.%20Ibirapuera%2C%202144%20-%20Indian%C3%B3polis%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004028-001!5e0!3m2!1spt-BR!2sbr!4v1723552368146!5m2!1spt-BR!2sbr"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -135,7 +114,7 @@ const Footer = () => {
       </div>
 
       <div className={styles.footerBottom}>
-        <p>&copy; {currentYear} Grupo Maclam. Todos os direitos reservados.</p>
+        <p>© {currentYear} Grupo Maclam. Todos os direitos reservados.</p>
       </div>
     </footer>
   );

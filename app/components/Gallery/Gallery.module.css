@@ -1,0 +1,51 @@
+.galleryContainer {
+  padding: 4rem 0;
+  background-color: var(--cor-fundo);
+  overflow: hidden; /* Garante que nada saia dos limites */
+}
+
+.galleryTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--cor-primaria);
+  margin-bottom: 3rem;
+}
+
+.carousel {
+  position: relative;
+  width: 90%; /* O carrossel não ocupa a tela inteira */
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.carouselInner {
+  display: flex;
+  transition: transform 0.8s ease-in-out; /* Transição mais suave */
+}
+
+.carouselItem {
+  flex: 0 0 100%; /* Cada item ocupa 100% da largura do carrossel */
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Proporção widescreen para as imagens */
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+  .galleryContainer {
+    padding: 3rem 0;
+  }
+  .carousel {
+    width: 100%; /* Em telas menores, ocupa toda a largura */
+    border-radius: 0;
+  }
+  .galleryTitle {
+    font-size: 2rem;
+  }
+  .carouselItem {
+    aspect-ratio: 4 / 3; /* Proporção um pouco mais alta para celular */
+  }
+}

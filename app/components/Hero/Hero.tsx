@@ -1,9 +1,7 @@
-import Image from "next/image";
 import styles from "./Hero.module.css";
 
 const Hero = () => {
   // O mesmo link do WhatsApp que definimos no componente Contato
-  // É uma boa prática centralizar essa informação no futuro, mas por enquanto podemos repetir.
   const numeroWhatsApp = "5511999999999"; // Lembre-se de usar o número real do cliente
   const mensagemPadrao =
     "Olá! Visitei o site do Grupo Maclam e gostaria de mais informações.";
@@ -13,25 +11,27 @@ const Hero = () => {
 
   return (
     <div className={styles.heroContainer}>
-      {/* Imagem de Fundo */}
-      <Image
-        src="/Banner.jpg"
-        alt="Empreendimento de alto padrão do Grupo Maclam"
-        fill // 'fill' faz a imagem preencher o contêiner pai
-        style={{ objectFit: "cover" }} // 'cover' garante que a imagem cubra tudo sem distorcer
-        quality={90} // Qualidade da imagem (padrão é 75)
-        priority // Essencial para o banner principal ser carregado rapidamente
+      {/* Vídeo de Fundo */}
+      <video
+        src="/banner-video.mp4" // Coloque seu vídeo na pasta /public
+        poster="/video-fallback.png"
+        autoPlay
+        loop
+        muted
+        playsInline
+        className={styles.backgroundVideo}
       />
 
-      {/* Overlay para escurecer a imagem e melhorar a legibilidade do texto */}
       <div className={styles.overlay}></div>
 
-      {/* Conteúdo de Texto e Botão */}
       <div className={styles.content}>
         <h1 className={styles.title}>
-          Cada detalhe é cuidadosamente projetado para oferecer uma experiência
-          única.
+          Mais que uma sede. Um ativo estratégico
         </h1>
+        <p className={styles.subtitle}>
+          Lajes corporativas de 140 m² e 280 m² à venda na Av. Ibirapuera,
+          projetadas para valorizar e potencializar o seu negócio.
+        </p>
         <a
           href={linkWhatsApp}
           target="_blank"

@@ -16,7 +16,8 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
-  const numeroWhatsApp = "5511999999999";
+  // Definição do link para o WhatsApp
+  const numeroWhatsApp = "5511999999999"; // Use o número correto do cliente
   const mensagemPadrao =
     "Olá! Visitei o site do Grupo Maclam e gostaria de mais informações.";
   const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(
@@ -37,21 +38,24 @@ const Header = () => {
         </Link>
       </div>
 
-      {/* Navegação que será adaptada */}
+      {/* Navegação atualizada conforme solicitado */}
       <nav className={`${styles.nav} ${isMenuOpen ? styles.active : ""}`}>
         <Link href="#inicio" onClick={closeMenu}>
           Início
         </Link>
-        <Link href="#sobre" onClick={closeMenu}>
-          Sobre
+        <Link href="#moema-trade-center" onClick={closeMenu}>
+          Moema Trade Center
         </Link>
         <Link href="#maclam-office" onClick={closeMenu}>
           Maclam Office
         </Link>
-        <Link href="#moema-trade-center" onClick={closeMenu}>
-          Moema Trade Center
-        </Link>
-        <Link href={linkWhatsApp} target="_blank" rel="noopener noreferrer">
+        {/* Este link de contato abre o WhatsApp em uma nova aba */}
+        <Link
+          href={linkWhatsApp}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={closeMenu} // Também fecha o menu mobile ao clicar
+        >
           Contato
         </Link>
       </nav>
